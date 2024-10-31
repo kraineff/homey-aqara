@@ -1,0 +1,31 @@
+{
+    "class": "petfeeder",
+    "name": {
+        "en": "Pet Feeder C1",
+        "ru": "Кормушка C1"
+    },
+    "images": {
+        "small": "{{driverAssetsPath}}/images/small.jpg",
+        "large": "{{driverAssetsPath}}/images/large.jpg"
+    },
+    "capabilities": [
+        "feeder_action",
+        "feeder_daily_portions", "feeder_daily_weight", "alarm_stuck",
+        "measure_battery"
+    ],
+    "energy": {
+        "batteries": ["OTHER", "OTHER", "OTHER"]
+    },
+    "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": ["aqara.feeder.acn001"],
+        "endpoints": {
+            "1": {
+                "clusters": [0, 3, 4, 5, 6, 10, 25, 64704]
+            },
+            "242": {
+                "clusters": [33]
+            }
+        }
+    }
+}

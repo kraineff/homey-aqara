@@ -1,0 +1,13 @@
+{
+    "name": "com.aqara",
+    "dependencies": {
+        "homey-zigbeedriver": "latest",
+        "zigbee-clusters": "latest"
+    },
+    "devDependencies": {
+        "@tsconfig/node16": "latest",
+        "@types/homey": "npm:homey-apps-sdk-v3-types@latest",
+        "@types/node": "latest",
+        "typescript": "latest"
+    }
+}

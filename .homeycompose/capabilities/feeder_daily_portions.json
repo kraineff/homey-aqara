@@ -1,0 +1,10 @@
+{
+    "title": {
+        "en": "Daily Portions",
+        "ru": "Дневные порции"
+    },
+    "type": "number",
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+}

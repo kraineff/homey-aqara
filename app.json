@@ -1,0 +1,194 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.aqara",
+  "version": "1.0.0",
+  "platforms": [
+    "local"
+  ],
+  "compatibility": ">=12.2.0",
+  "sdk": 3,
+  "brandColor": "#546C9E",
+  "name": "Aqara",
+  "description": {
+    "en": "Familiar things are getting smarter",
+    "ru": "Привычные вещи становятся умнее"
+  },
+  "category": [
+    "appliances"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "support": "mailto:tolls.gospel-0w@icloud.com",
+  "author": {
+    "name": "Alexey Krainev",
+    "email": "tolls.gospel-0w@icloud.com"
+  },
+  "source": "https://github.com/kraineff/homey-aqara",
+  "bugs": {
+    "url": "https://github.com/kraineff/homey-aqara/issues"
+  },
+  "drivers": [
+    {
+      "class": "petfeeder",
+      "name": {
+        "en": "Pet Feeder C1",
+        "ru": "Кормушка C1"
+      },
+      "images": {
+        "small": "/drivers/feeder-acn001/assets/images/small.jpg",
+        "large": "/drivers/feeder-acn001/assets/images/large.jpg"
+      },
+      "capabilities": [
+        "feeder_action",
+        "feeder_daily_portions",
+        "feeder_daily_weight",
+        "alarm_stuck",
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "OTHER",
+          "OTHER",
+          "OTHER"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "LUMI",
+        "productId": [
+          "aqara.feeder.acn001"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              10,
+              25,
+              64704
+            ]
+          },
+          "242": {
+            "clusters": [
+              33
+            ]
+          }
+        }
+      },
+      "id": "feeder-acn001",
+      "settings": [
+        {
+          "id": "portion_count",
+          "type": "number",
+          "highlight": true,
+          "label": {
+            "en": "Portions Count",
+            "ru": "Количество порций"
+          },
+          "units": {
+            "en": "portion",
+            "ru": "порция"
+          },
+          "min": 0,
+          "max": 10,
+          "value": 1
+        },
+        {
+          "id": "portion_weight",
+          "type": "number",
+          "label": {
+            "en": "Portion Weight",
+            "ru": "Вес порции"
+          },
+          "units": {
+            "en": "gram",
+            "ru": "грамм"
+          },
+          "min": 0,
+          "max": 20,
+          "value": 8
+        },
+        {
+          "id": "control_lock",
+          "type": "checkbox",
+          "label": {
+            "en": "Control Lock",
+            "ru": "Блокировка управления"
+          },
+          "value": false
+        },
+        {
+          "id": "indicator_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Indicator Mode",
+            "ru": "Режим индикатора"
+          },
+          "values": [
+            {
+              "id": "2",
+              "label": {
+                "en": "Disabled",
+                "ru": "Выключен"
+              }
+            },
+            {
+              "id": "0",
+              "label": {
+                "en": "Enabled",
+                "ru": "Включен"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled At Night",
+                "ru": "Включен по ночам"
+              }
+            }
+          ],
+          "value": "0"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "feeder_action": {
+      "title": {
+        "en": "Feed",
+        "ru": "Кормить"
+      },
+      "type": "boolean",
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "uiQuickAction": true
+    },
+    "feeder_daily_portions": {
+      "title": {
+        "en": "Daily Portions",
+        "ru": "Дневные порции"
+      },
+      "type": "number",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "feeder_daily_weight": {
+      "title": {
+        "en": "Daily Weight",
+        "ru": "Дневной вес"
+      },
+      "type": "number",
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    }
+  }
+}

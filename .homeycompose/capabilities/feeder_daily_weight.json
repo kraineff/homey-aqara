@@ -1,0 +1,10 @@
+{
+    "title": {
+        "en": "Daily Weight",
+        "ru": "Дневной вес"
+    },
+    "type": "number",
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+}

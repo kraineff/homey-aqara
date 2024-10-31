@@ -1,0 +1,74 @@
+[
+    {
+        "id": "portion_count",
+        "type": "number",
+        "highlight": true,
+        "label": {
+            "en": "Portions Count",
+            "ru": "Количество порций"
+        },
+        "units": {
+            "en": "portion",
+            "ru": "порция"
+        },
+        "min": 0,
+        "max": 10,
+        "value": 1
+    },
+    {
+        "id": "portion_weight",
+        "type": "number",
+        "label": {
+            "en": "Portion Weight",
+            "ru": "Вес порции"
+        },
+        "units": {
+            "en": "gram",
+            "ru": "грамм"
+        },
+        "min": 0,
+        "max": 20,
+        "value": 8
+    },
+    {
+        "id": "control_lock",
+        "type": "checkbox",
+        "label": {
+            "en": "Control Lock",
+            "ru": "Блокировка управления"
+        },
+        "value": false
+    },
+    {
+        "id": "indicator_mode",
+        "type": "dropdown",
+        "label": {
+            "en": "Indicator Mode",
+            "ru": "Режим индикатора"
+        },
+        "values": [
+            {
+                "id": "2",
+                "label": {
+                    "en": "Disabled",
+                    "ru": "Выключен"
+                }
+            },
+            {
+                "id": "0",
+                "label": {
+                    "en": "Enabled",
+                    "ru": "Включен"
+                }
+            },
+            {
+                "id": "1",
+                "label": {
+                    "en": "Enabled At Night",
+                    "ru": "Включен по ночам"
+                }
+            }
+        ],
+        "value": "0"
+    }
+]
